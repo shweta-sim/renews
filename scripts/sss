@@ -1,1 +1,0 @@
-Access to fetch at 'https://gnews.io/api/v3/topics/?q=dems&token=e3c2c9c856ef7b3f4204e008c4e61913' from origin 'http://127.0.0.1:5500' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.

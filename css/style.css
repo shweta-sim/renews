@@ -348,6 +348,20 @@ footer {
   font-size: 18px;
   letter-spacing: 2px;
 }
+
+#addTopicsWrapper {
+  padding: 10px;
+  margin: 10px;
+  display: block;
+}
+
+#myTopicsWrapper {
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  background-color: cadetblue;
+}
+
 @media screen and (max-width: 575.98px) {
   header .profilepic,
   header .addtopic {
@@ -387,6 +401,7 @@ footer {
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 .newsfeed article:hover {
   z-index: 9;

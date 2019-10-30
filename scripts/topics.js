@@ -1,20 +1,71 @@
-let topicsArr = ['health', 'science', 'entertainment'];
-let topic = 'health';
+let defaultTopics = [
+  'world',
+  'nation',
+  'business',
+  'technology',
+  'entertainment',
+  'sports',
+  'science',
+  'health'
+];
 
-window.onload = () => {
-  console.log('hi');
+let topics = window.localStorage.getItem('remainingTopics')
+  ? JSON.parse(window.localStorage.getItem('remainingTopics'))
+  : defaultTopics;
 
-  updateClock();
-  setInterval('updateClock()', 1000);
+let myTopics = window.localStorage.getItem('chosenTopics')
+  ? JSON.parse(window.localStorage.getItem('chosenTopics'))
+  : [];
 
-  fetch(`${top_news_url}?token=${_api_key}`)
-    .then(res => res.json())
-    .then(data => {
-      const results = data.articles;
-      clearFeed();
-      for (let r of results) {
-        renderFeed(r);
-      }
-    })
-    .catch(console.log);
+const topicsWrapper = document.getElementById('addTopicsWrapper');
+const myTopicsWrapper = document.getElementById('myTopicsWrapper');
+
+const saveToLocalStorage = () => {
+  window.localStorage.setItem('remainingTopics', JSON.stringify(topics));
+  window.localStorage.setItem('chosenTopics', JSON.stringify(myTopics));
 };
+
+const generateButtons = topics => {
+  for (let topic of topics) {
+    let topicButton = topicsWrapper.appendChild(
+      document.createElement('button')
+    );
+    topicButton.textContent = topic;
+    topicButton.addEventListener('click', e => {
+      const choice = e.target.textContent;
+      myTopics.push(choice);
+      topics.splice(topics.indexOf(choice), 1);
+      console.log(topics);
+      console.log(myTopics);
+      window.dispatchEvent(new Event('stateChanged'));
+    });
+  }
+};
+
+const generateMenu = myTopics => {
+  for (let topic of myTopics) {
+    let myTopicButton = myTopicsWrapper.appendChild(
+      document.createElement('button')
+    );
+    myTopicButton.textContent = topic;
+    myTopicButton.addEventListener('click', e => {
+      e.preventDefault();
+      fetch(`${articles_url}${topic}?token=${_api_key}`)
+        .then(res => res.json())
+        .then(data => {
+          handleFetch(data);
+        })
+        .catch(console.log);
+    });
+  }
+};
+
+window.addEventListener('stateChanged', () => {
+  myTopicsWrapper.innerHTML = '';
+  topicsWrapper.innerHTML = '';
+  generateButtons(topics);
+  generateMenu(myTopics);
+  saveToLocalStorage();
+});
+
+window.dispatchEvent(new Event('stateChanged'));

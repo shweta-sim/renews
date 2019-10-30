@@ -84,7 +84,7 @@ h2 {
   line-height: 50px;
 }
 h3 {
-  font-size: 36px;
+  font-size: 24px;
   line-height: 44px;
 }
 h4 {
@@ -96,7 +96,7 @@ h5 {
   line-height: 32px;
 }
 h6 {
-  font-size: 20px;
+  font-size: 28px;
   line-height: 28px;
 }
 .img-fluid {
@@ -336,6 +336,18 @@ header .searchbtn a {
   color: #fff;
 }
 
+footer {
+  background: url('../imgs/img-stockholm.jpg') 50% 50% no-repeat !important;
+  background-color: black;
+  object-fit: cover;
+  opacity: 0.9;
+
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
 @media screen and (max-width: 575.98px) {
   header .profilepic,
   header .addtopic {

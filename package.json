@@ -1,0 +1,25 @@
+{
+  "name": "renews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shweta-sim/renews.git"
+  },
+  "author": "Shweta Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shweta-sim/renews/issues"
+  },
+  "homepage": "https://github.com/shweta-sim/renews#readme",
+  "dependencies": {
+    "eslint": "^6.6.0",
+    "node-fetch": "^2.6.0",
+    "webpack": "^4.41.2"
+  }
+}

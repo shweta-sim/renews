@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable=yes"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Dashboard</title>
+
+    <!-- Style CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <section class="profilepic">
+        <img src="imgs/img-user-profile.jpg" />
+      </section>
+      <section class="search">
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="What're we looking for?"
+        />
+        <section class="searchbtn">
+          <a href="#" id="searchButton"><i class="fas fa-search"></i></a>
+        </section>
+
+        <section class="addtopic">
+          <a href="#"><i class="fas fa-plus"></i></a>
+        </section>
+      </section>
+    </header>
+    <section class="widgets">
+      <aside>
+        <section class="w-datetime">
+          <h6 id="date"></h6>
+          <h3 id="time"></h3>
+        </section>
+        <section class="w-weather">
+          <h1 class="temperature">20</h1>
+        </section>
+      </aside>
+      <section class="w-banner">&nbsp;</section>
+    </section>
+    <!-- Header End -->
+    <!-- News Feed Start -->
+    <section class="newsfeed">
+      <!-- <article>
+        <div>
+          <img src="imgs/img-news6.jpg" />
+          <h5>Lorem ipsum dolor</h5>
+          <p class="datetime">29-10-2019 06:30PM</p>
+          <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </div>
+      </article> -->
+    </section>
+    <!-- News Feed End -->
+
+    <script src="index.js"></script>
+    <script src="scripts/news-config.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/date-time.js"></script>
+  </body>
+</html>

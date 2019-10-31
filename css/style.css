@@ -77,8 +77,8 @@ h2 {
   line-height: 50px;
 }
 h3 {
-  font-size: 24px;
-  line-height: 44px;
+  font-size: 18px;
+  line-height: 30px;
 }
 h4 {
   font-size: 30px;
@@ -89,7 +89,7 @@ h5 {
   line-height: 32px;
 }
 h6 {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 28px;
 }
 .img-fluid {
@@ -105,11 +105,7 @@ header section {
   margin: 10px;
   margin-bottom: 0;
 }
-header .profilepic {
-  width: 100px;
-  height: 100px;
-  background: #fff;
-}
+
 header .search {
   display: flex;
   align-items: center;
@@ -145,7 +141,8 @@ header .search input::-moz-placeholder {
 header .search input:-ms-input-placeholder {
   color: #dadada !important;
 }
-header .addtopic {
+header .addtopic,
+header .searchbtn {
   width: 100px;
   height: 100px;
   display: flex;
@@ -153,23 +150,34 @@ header .addtopic {
   justify-content: center;
   color: #fff;
   font-size: 30px;
-  background: #484c7f;
   transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
 }
-header .addtopic:hover {
-  background: #303660;
+
+header .addtopic {
+  background: #484c7f;
 }
-header .addtopic a {
+header .addtopic:hover {
+  background: gray;
+}
+header .addtopic a,
+header .searchbtn a {
   display: flex;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+header .searchbtn {
+  background: gray;
+}
+header .searchbtn:hover {
+  background: #303660;
 }
 .widgets {
   display: flex;
@@ -216,6 +224,8 @@ header .addtopic a {
 }
 .widgets .w-datetime h6,
 .widgets .w-datetime h3 {
+  text-align: center;
+  line-height: 1.5;
   color: #fff;
 }
 .widgets .w-weather {
@@ -294,64 +304,35 @@ header .addtopic a {
   .widgets .w-weather {
     width: 100%;
     flex: none;
+    height: 120px;
   }
   .widgets .w-banner {
-    width: 97%;
+    width: 100%;
     flex: none;
-    height: 200px;
+    height: 170px;
     order: 1;
     margin-bottom: 10px;
   }
 }
 
-header .searchbtn {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 30px;
-  background: gray;
-  transition: all 0.3s ease-in;
-  -moz-transition: all 0.3s ease-in;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  -ms-transition: all 0.3s ease-in;
-}
-header .searchbtn:hover {
-  background: #303660;
-}
-header .searchbtn a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-
 footer {
-  background: url('../imgs/img-stockholm.jpg') 50% 50% no-repeat !important;
+  margin-top: 100px;
   background-color: black;
-  object-fit: cover;
-  opacity: 0.9;
-
   padding: 15px;
   text-align: center;
   color: white;
   font-size: 18px;
   letter-spacing: 2px;
-}
-
-#addTopicsWrapper {
-  padding: 10px;
-  margin: 10px;
-  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+  opacity: 0.7;
 }
 
 .myTopicsWrapper {
-  padding: 10px;
+  padding: 10px 2px;
   margin: 10px;
   display: block;
   background-color: #484c7f;
@@ -360,7 +341,7 @@ footer {
   background: none;
   color: white;
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 2px 0;
   text-transform: uppercase;
   border: none;
   border-right: 1px solid rgb(202, 219, 220);
@@ -374,22 +355,27 @@ footer {
 }
 
 @media screen and (max-width: 575.98px) {
-  header .profilepic,
-  header .addtopic {
+  header .addtopic,
+  header .searchbtn {
     width: 50px;
     height: 50px;
   }
-  header .profilepic img {
-    width: 50px;
-    height: 50px;
-  }
-  header .addtopic i {
+
+  header .addtopic i,
+  header .searchbtn i {
     font-size: 20px;
   }
   header .search input {
     height: 50px;
     padding: 0 10px;
     font-size: 20px;
+  }
+  .myTopicsWrapper {
+    display: none;
+  }
+
+  .newsfeed article div {
+    padding: 10px 10px;
   }
 }
 .newsfeed {
@@ -398,6 +384,7 @@ footer {
   -webkit-column-width: 20em;
   -moz-column-gap: 10px;
   -webkit-column-gap: 10px;
+  margin-bottom: 100px;
 }
 .newsfeed article {
   position: relative;
@@ -415,7 +402,7 @@ footer {
   cursor: pointer;
 }
 .newsfeed article:hover {
-  z-index: 9;
+  z-index: 5;
   box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 30px 30px 60px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);

@@ -15,8 +15,24 @@ if (mm < 10) {
   mm = '0' + mm;
 }
 
-today = mm + ' / ' + dd + ' / ' + yyyy;
-dashboardDate.innerHTML = today;
+today = dd + ' / ' + mm + ' / ' + yyyy;
+
+// Get Weekday
+const getWeekDay = date => {
+  let days = [
+    'Sunday,',
+    'Monday,',
+    'Tuesday,',
+    'Wednesday,',
+    'Thursday,',
+    'Friday,',
+    'Saturday,'
+  ];
+  return days[date.getDay()];
+};
+
+// let weekDay = getWeekDay(today);
+dashboardDate.innerHTML = `${getWeekDay(new Date())}<br>${today}`;
 
 // TIME
 function updateClock() {

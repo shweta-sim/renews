@@ -12,12 +12,12 @@
 
     <title>Dashboard</title>
 
-    <!-- Style CSS -->
+    <!-- CSS -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/addTopics.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header Start -->
-    <section id="addTopicsWrapper"></section>
 
     <header>
       <section class="search">
@@ -32,12 +32,21 @@
           <a href="#" id="searchButton"><i class="fas fa-search"></i></a>
         </section>
 
-        <section class="addtopic">
+        <section class="addtopic trigger">
           <a href="#"><i class="fas fa-plus"></i></a>
         </section>
+
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close-button">×</span>
+            <h1>Choose News Topics</h1>
+            <section id="addTopicsWrapper"></section>
+          </div>
+        </div>
       </section>
     </header>
     <section id="myTopicsWrapper" class="myTopicsWrapper"></section>
+
     <section class="widgets">
       <aside>
         <section class="w-datetime">
@@ -48,27 +57,17 @@
           <h1 class="temperature">20</h1>
         </section>
       </aside>
-      <section class="w-banner">
-        <!-- <img id="randomImage" /> -->
-      </section>
+      <section class="w-banner"></section>
     </section>
     <!-- Header End -->
     <!-- News Feed Start -->
-    <section class="newsfeed">
-      <!-- <article>
-        <div>
-          <img src="imgs/img-news6.jpg" />
-          <h5>Lorem ipsum dolor</h5>
-          <p class="datetime">29-10-2019 06:30PM</p>
-          <p>Lorem ipsum dolor sit amet, consectetur.</p>
-        </div>
-      </article> -->
-    </section>
+    <section class="newsfeed"></section>
     <!-- News Feed End -->
 
-    <footer>Developed by Shweta Singh for &lt/ salt &gt</footer>
+    <footer>Developed by Shweta Singh for &lt/salt&gt</footer>
 
     <script src="scripts/onLoad.js"></script>
+    <script src="scripts/addTopics.js"></script>
     <script src="scripts/renderFeed.js"></script>
     <script src="scripts/topics.js"></script>
     <script src="scripts/randomNewsImage.js"></script>

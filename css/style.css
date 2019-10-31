@@ -255,12 +255,14 @@ header .addtopic a {
 }
 .widgets .w-banner {
   flex: 5;
-  height: 400px;
-  padding: 5px;
+  height: 410px;
   margin-left: 10px;
-  background: url('../imgs/bg-banner.jpg') 50% 50% no-repeat !important;
+  background-position: 50% 50%;
+  background-repeat: no-repeat !important;
   background-size: cover;
+  object-fit: cover;
 }
+
 @media screen and (max-width: 1366.98px) {
   .widgets .w-banner {
     flex: 4;

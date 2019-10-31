@@ -12,4 +12,3 @@ const images = [
   'imgs/img-news11.jpg',
   'imgs/img-news12.jpg'
 ];
-let random = images[Math.floor(Math.random() * images.length)];

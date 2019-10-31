@@ -243,6 +243,9 @@ header .searchbtn:hover {
   -webkit-transition: all 1s ease-in;
   -o-transition: all 1s ease-in;
   -ms-transition: all 1s ease-in;
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
 }
 .widgets .w-weather:hover {
   background-position: 50% -80px !important;
@@ -256,6 +259,7 @@ header .searchbtn:hover {
   height: 100%;
   background: rgba(246, 173, 123, 0.3);
 }
+
 .widgets .w-weather h1.temperature {
   color: #fff;
   font-size: 60px;
@@ -296,6 +300,29 @@ header .searchbtn:hover {
   }
 }
 @media screen and (max-width: 575.98px) {
+  header .addtopic,
+  header .searchbtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  header .addtopic i,
+  header .searchbtn i {
+    font-size: 20px;
+  }
+  header .search input {
+    height: 50px;
+    padding: 0 10px;
+    font-size: 20px;
+  }
+  .myTopicsWrapper {
+    display: none;
+  }
+
+  .newsfeed article div {
+    padding: 10px 10px;
+  }
+
   .widgets aside {
     margin-right: 0;
     order: 2;
@@ -312,6 +339,9 @@ header .searchbtn:hover {
     height: 170px;
     order: 1;
     margin-bottom: 10px;
+  }
+  .myTopicsWrapper {
+    display: none;
   }
 }
 
@@ -355,30 +385,6 @@ footer {
   color: rgb(202, 219, 220);
 }
 
-@media screen and (max-width: 575.98px) {
-  header .addtopic,
-  header .searchbtn {
-    width: 50px;
-    height: 50px;
-  }
-
-  header .addtopic i,
-  header .searchbtn i {
-    font-size: 20px;
-  }
-  header .search input {
-    height: 50px;
-    padding: 0 10px;
-    font-size: 20px;
-  }
-  .myTopicsWrapper {
-    display: none;
-  }
-
-  .newsfeed article div {
-    padding: 10px 10px;
-  }
-}
 .newsfeed {
   padding: 10px;
   -moz-column-width: 20em;

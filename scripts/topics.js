@@ -35,14 +35,15 @@ const generateButtons = topics => {
       const choice = e.target.textContent;
       myTopics.push(choice);
       topics.splice(topics.indexOf(choice), 1);
-      console.log(topics);
-      console.log(myTopics);
       window.dispatchEvent(new Event('stateChanged'));
     });
   }
 };
 
 const generateMenu = myTopics => {
+  if (myTopics.length > 0) {
+    myTopicsWrapper.style.display = 'block';
+  }
   for (let topic of myTopics) {
     let myTopicButton = myTopicsWrapper.appendChild(
       document.createElement('button')

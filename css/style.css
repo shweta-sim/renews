@@ -336,6 +336,7 @@ footer {
   margin: 10px;
   display: block;
   background-color: #484c7f;
+  display: none;
 }
 .myTopicsWrapper button {
   background: none;

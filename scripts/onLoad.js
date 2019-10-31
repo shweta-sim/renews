@@ -7,7 +7,6 @@ window.onload = () => {
   fetch(`${banner_url}${banner_api_key}&query=${randomTopic}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data.urls.full);
       handleBannerFetch(data.urls.full);
     })
     .catch(console.log);

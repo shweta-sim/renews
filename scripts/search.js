@@ -3,7 +3,6 @@ const searchBtn = document.querySelector('#searchButton');
 const getValueByEnter = searchBox => {
   if (event.key === 'Enter') {
     searchVal = searchBox.value;
-    console.log(searchBox.value);
 
     fetch(`${search_url}?q=${searchVal}&token=${_api_key}`)
       .then(res => res.json())
@@ -17,7 +16,6 @@ const getValueByEnter = searchBox => {
 searchBtn.addEventListener('click', e => {
   e.preventDefault();
   const searchVal = document.querySelector('#search').value;
-  console.log(searchVal);
 
   fetch(`${search_url}?q=${searchVal}&token=${_api_key}`)
     .then(res => res.json())

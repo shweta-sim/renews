@@ -18,7 +18,6 @@
   <body>
     <!-- Header Start -->
     <section id="addTopicsWrapper"></section>
-    <section id="myTopicsWrapper"></section>
 
     <header>
       <section class="search">
@@ -27,6 +26,7 @@
           id="search"
           name="search"
           placeholder="What're we looking for?"
+          onkeydown="getValueByEnter(this)"
         />
         <section class="searchbtn">
           <a href="#" id="searchButton"><i class="fas fa-search"></i></a>
@@ -37,6 +37,7 @@
         </section>
       </section>
     </header>
+    <section id="myTopicsWrapper" class="myTopicsWrapper"></section>
     <section class="widgets">
       <aside>
         <section class="w-datetime">
@@ -64,6 +65,7 @@
     <!-- News Feed End -->
 
     <footer>Developed by Shweta Singh for &lt/ salt &gt</footer>
+
     <script src="scripts/renderFeed.js"></script>
     <script src="scripts/topics.js"></script>
     <script src="scripts/topNews.js"></script>

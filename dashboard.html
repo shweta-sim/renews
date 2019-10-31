@@ -6,8 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2, user-scalable=yes"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
     <meta name="format-detection" content="telephone=no" />
     <title>Dashboard</title>
     <link href="css/style.css" rel="stylesheet" />
@@ -17,6 +15,7 @@
     <!-- Header Start -->
     <div class="temp"></div>
     <header>
+      <!-- Search Box, Button & Add Topic -->
       <section class="search">
         <input
           type="text"
@@ -33,6 +32,7 @@
           <a href="#"><i class="fas fa-plus"></i></a>
         </section>
 
+        <!-- Modal Window For Topics -->
         <div class="modal">
           <div class="modal-content">
             <span class="close-button">×</span>
@@ -42,8 +42,11 @@
         </div>
       </section>
     </header>
+
+    <!-- My Topics Row -->
     <section id="myTopicsWrapper" class="myTopicsWrapper"></section>
 
+    <!-- Date/Time, Weather & Banner widgets -->
     <section class="widgets">
       <aside>
         <section class="w-datetime">
@@ -57,14 +60,16 @@
       </aside>
       <section class="w-banner"></section>
     </section>
-    <!-- Header End -->
-    <!-- News Feed Start -->
+
+    <!-- News Feed -->
     <section class="newsfeed"></section>
-    <!-- News Feed End -->
 
     <footer>Developed by Shweta Singh for &lt/salt&gt</footer>
 
+    <!-- All Scripts -->
+    <script src="scripts/config.js"></script>
     <script src="scripts/onLoad.js"></script>
+    <script src="scripts/moment.js"></script>
     <script src="scripts/addTopics.js"></script>
     <script src="scripts/temperature.js"></script>
     <script src="scripts/renderFeed.js"></script>
@@ -72,7 +77,6 @@
     <script src="scripts/randomNewsImage.js"></script>
     <script src="scripts/randomBannerImage.js"></script>
     <script src="index.js"></script>
-    <script src="scripts/config.js"></script>
     <script src="scripts/search.js"></script>
     <script src="scripts/date-time.js"></script>
   </body>

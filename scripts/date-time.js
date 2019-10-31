@@ -1,63 +1,11 @@
+// Using Moment JS to get current Date & Time
 const dashboardDate = document.querySelector('#date');
 const dashboardTime = document.querySelector('#time');
 
 // DATE
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1;
-var yyyy = today.getFullYear();
-
-if (dd < 10) {
-  dd = '0' + dd;
-}
-
-if (mm < 10) {
-  mm = '0' + mm;
-}
-
-today = dd + ' / ' + mm + ' / ' + yyyy;
-
-// Get Weekday
-const getWeekDay = date => {
-  let days = [
-    'Sunday,',
-    'Monday,',
-    'Tuesday,',
-    'Wednesday,',
-    'Thursday,',
-    'Friday,',
-    'Saturday,'
-  ];
-  return days[date.getDay()];
-};
-
-// let weekDay = getWeekDay(today);
-dashboardDate.innerHTML = `${getWeekDay(new Date())}<br>${today}`;
+dashboardDate.innerHTML = moment().format('MMMM Do YYYY');
 
 // TIME
-function updateClock() {
-  var today = new Date();
-
-  var currentHours = today.getHours();
-  var currentMinutes = today.getMinutes();
-  var currentSeconds = today.getSeconds();
-
-  currentMinutes = (currentMinutes < 10 ? '0' : '') + currentMinutes;
-  currentSeconds = (currentSeconds < 10 ? '0' : '') + currentSeconds;
-
-  var timeOfDay = currentHours < 12 ? 'AM' : 'PM';
-
-  currentHours = currentHours > 12 ? currentHours - 12 : currentHours;
-  currentHours = currentHours == 0 ? 12 : currentHours;
-
-  var currentTimeString =
-    currentHours +
-    ':' +
-    currentMinutes +
-    ':' +
-    currentSeconds +
-    ' ' +
-    timeOfDay;
-
-  dashboardTime.innerHTML = currentTimeString;
-}
+const updateClock = () => {
+  dashboardTime.innerHTML = moment().format('LTS');
+};

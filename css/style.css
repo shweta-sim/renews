@@ -127,7 +127,6 @@ header .search input {
 }
 header .search input:focus {
   color: #000;
-  background: #efefef;
 }
 header .search input::-webkit-input-placeholder {
   color: #dadada !important;

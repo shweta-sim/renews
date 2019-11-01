@@ -89,7 +89,7 @@ h5 {
   line-height: 32px;
 }
 h6 {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 28px;
 }
 .img-fluid {
@@ -276,74 +276,6 @@ header .searchbtn:hover {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1366.98px) {
-  .widgets .w-banner {
-    flex: 4;
-  }
-}
-@media screen and (max-width: 1199.98px) {
-  .widgets aside {
-    flex: 2;
-    margin-right: 10px;
-  }
-  .widgets .w-banner {
-    flex: 4;
-  }
-  .widgets .w-datetime,
-  .widgets .w-weather {
-    width: 100%;
-    flex: none;
-  }
-  .w-banner {
-    margin-left: 0 !important;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  header .addtopic,
-  header .searchbtn {
-    width: 50px;
-    height: 50px;
-  }
-
-  header .addtopic i,
-  header .searchbtn i {
-    font-size: 20px;
-  }
-  header .search input {
-    height: 50px;
-    padding: 0 10px;
-    font-size: 20px;
-  }
-  .myTopicsWrapper {
-    display: none;
-  }
-
-  .newsfeed article div {
-    padding: 10px 10px;
-  }
-
-  .widgets aside {
-    margin-right: 0;
-    order: 2;
-  }
-  .widgets .w-datetime,
-  .widgets .w-weather {
-    width: 100%;
-    flex: none;
-    height: 120px;
-  }
-  .widgets .w-banner {
-    width: 100%;
-    flex: none;
-    height: 170px;
-    order: 1;
-    margin-bottom: 10px;
-  }
-  .myTopicsWrapper {
-    display: none;
-  }
-}
-
 footer {
   margin-top: 100px;
   background-color: black;
@@ -482,4 +414,86 @@ footer {
 .newsfeed article:nth-child(6n + 4) h5,
 .newsfeed article:nth-child(6n + 4) p {
   color: #000;
+}
+
+@media screen and (max-width: 1366.98px) {
+  .widgets .w-banner {
+    flex: 4;
+  }
+}
+@media screen and (max-width: 1199.98px) {
+  .widgets aside {
+    flex: 2;
+    margin-right: 10px;
+  }
+  .widgets .w-banner {
+    flex: 4;
+  }
+  .widgets .w-datetime,
+  .widgets .w-weather {
+    width: 100%;
+    flex: none;
+  }
+  .w-banner {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header .addtopic,
+  header .searchbtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  header .addtopic i,
+  header .searchbtn i {
+    font-size: 20px;
+  }
+  header .search input {
+    height: 50px;
+    padding: 0 10px;
+    font-size: 20px;
+  }
+
+  .newsfeed article div {
+    padding: 10px 10px;
+  }
+
+  .widgets aside {
+    margin-right: 0;
+    order: 2;
+  }
+  .widgets .w-datetime,
+  .widgets .w-weather {
+    width: 100%;
+    flex: none;
+    height: 120px;
+  }
+  .widgets .w-banner {
+    width: 100%;
+    flex: none;
+    height: 170px;
+    order: 1;
+    margin-bottom: 10px;
+  }
+
+  .myTopicsWrapper {
+    padding: 5px 2px;
+    display: none;
+  }
+  .myTopicsWrapper button {
+    background: none;
+    color: white;
+    padding: 2px 5px;
+    margin: 1px 0;
+    text-transform: uppercase;
+    border: none;
+    border-right: 1px solid rgb(202, 219, 220);
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .myTopicsWrapper button:hover {
+    color: rgb(202, 219, 220);
+  }
 }

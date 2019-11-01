@@ -11,7 +11,17 @@ const images = [
   'imgs/img-news9.jpg',
   'imgs/img-news10.jpg',
   'imgs/img-news11.jpg',
-  'imgs/img-news12.jpg'
+  'imgs/img-news12.jpg',
+  'imgs/img-news13.jpeg',
+  'imgs/img-news14.jpeg',
+  'imgs/img-news15.jpeg',
+  'imgs/img-news16.jpeg',
+  'imgs/img-news17.jpeg',
+  'imgs/img-news18.jpeg',
+  'imgs/img-news19.jpeg',
+  'imgs/img-news20.jpeg',
+  'imgs/img-news21.jpeg',
+  'imgs/img-news22.jpeg'
 ];
 
 // Generate random images based on selected topic
